@@ -54,7 +54,7 @@ defmodule Tron do
   @spec address(private_key) :: address
   def address(<<privkey::32-bytes>>) do
     <<4, pubkey::64-bytes>> = public_key(privkey)
-    <<_::12-bytes, address::20-bytes>> = :keccakf1600.hash(:sha3_256, pubkey)
+    <<_::12-bytes, address::20-bytes>> = KeccakEx.hash(pubkey)
     <<0x41, address::bytes>>
   end
 

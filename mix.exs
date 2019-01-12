@@ -32,7 +32,7 @@ defmodule Tron.MixProject do
       {:protobuf, "~> 0.5.3"},
       {:google_protos, "~> 0.1"},
       {:grpc, "~> 0.3.0-alpha.2"},
-      {:keccakf1600, "~> 2.0", hex: :keccakf1600_orig},
+      {:keccak_ex, "~> 0.1.2"},
       {:libsecp256k1, "~> 0.1.10"},
       {:ex_doc, "~> 0.19", only: :dev, runtime: false}
     ]
